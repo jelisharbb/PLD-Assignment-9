@@ -19,6 +19,9 @@ from fpdf import FPDF
 # specify the layout (portrait), unit (millimeters), and format (letter size) of the pdf
 pdf = FPDF ('P', 'mm', 'Letter')
 
+# set automatic page break
+pdf.set_auto_page_break(auto=True, margin=15)
+
 # add a page
 pdf.add_page() 
 
@@ -26,7 +29,8 @@ pdf.add_page()
 pdf.set_font('helvetica', '', 16)
 
 # add text (width, height, text)
-pdf.cell(40, 10, 'Hello, world!')
+for i in range(1, 51):
+    pdf.cell(0, 10, f"This is line {i}", ln=True)
 
 # generating pdf
 pdf.output('BUGNON_JELISHARUTH.pdf')
