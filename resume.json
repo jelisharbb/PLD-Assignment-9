@@ -1,27 +1,44 @@
 {
-  "Basic Information": {
+  "Personal Information": {
     "Name": "Jelisha Ruth B. Bugnon",
     "Sex": "Female",
     "Age": "19 years old",
     "Address": "Gangnam, Seoul, South Korea",
-    "Contact Number": "+639 123 456 789",
+    "Contact Number": "+82 10-81034-9472",
     "Email Address": "bugnonjr@gmail.com"
   },
 
-  "Description": {},
+  "Description": "An oragnize and detailed-orinted student who always strive to achieve the highest standard possible, at any given task.",
 
-  "Education Attainment": {
-    "Tertiary": {
+  "Education": {
+    "Tertiary (Current)": {
       "Name": "Korea Advanced Institute of Science & Technology (KAIST)",
       "Address": "291 Daehak-ro, Yuseong-gu, Daejeon, South Korea"
     },
     "Secondary": {
       "Name": "Seoul National University",
-      "Address": "1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea"
+      "Address": "1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea",
+      "Achievement/s": [
+        "Best in drafting during 9th grade",
+        "Belongs to 5.77% of her batch during 11th grade, ranking 133.5 out of 2312 students"
+      ]
     },
     "Primary": {
       "Name": "Ewha Womans University",
-      "Address": "52 Ewhayeodae-gil, Seodaemun-gu, Seoul, South Korea"
+      "Address": "52 Ewhayeodae-gil, Seodaemun-gu, Seoul, South Korea",
+      "Achievement": [
+        "Graduated as valedictorian",
+        "Quiz Bee winner in Mathematics during 1st grade",
+        "Member of school's drum and lyre band for three years"
+      ]
     }
-  }
+  },
+
+  "Skills": [
+    "Critical-thinking",
+    "Networking",
+    "Organizational",
+    "Willingness to learn",
+    "Computer Programming"
+  ]
 }
