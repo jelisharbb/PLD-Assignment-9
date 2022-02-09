@@ -14,27 +14,44 @@
 
 """ PDF Resume Creator """
 
+# import function to be used
 from fpdf import FPDF
+import json
 
-# specify the layout (portrait), unit (millimeters), and format (letter size) of the pdf
-pdf = FPDF ('P', 'mm', 'Letter')
+importResume = "resume.json"
+with open(importResume, "r") as resumeJson:
+    resumeData = json.loads(resumeJson.read())
 
-# set automatic page break
+pdf = FPDF('P', 'mm', 'Letter')
+pdf.add_page()
 pdf.set_auto_page_break(auto=True, margin=15)
 
-# add a page
-pdf.add_page() 
+def headerDetails(header):
+    header.image('resume picture.jpg', 155, 10, 50.8)
+    header.set_font('helvetica', 'B', 30)
+    header.cell(110, 15, "Jelisha Ruth Bugnon", ln=True, align='c')
+    header.set_font('helvetica', '', 20)
+    header.cell(90, 10, "Junior Software Developer", ln=True, align='c')
+    header.ln(25)
 
-# specify font, regular/default (not bold, italic, or underlined), and font size
-pdf.set_font('helvetica', '', 16)
+def personalDetails(personal):
+    personal.cell(90, 10, "Personal Information", ln=1, align='c')
+    personal.ln(3)
+    personal.set_font('helvetica', '', 12)
+    personal.cell(40, 6, "Name: " + str(resumeData["Personal Information"][0]["Name"]), ln=10)
+    personal.cell(40, 6, "Sex: " + str(resumeData["Personal Information"][0]["Sex"]), ln=10)
+    personal.cell(40, 6, "Age: " + str(resumeData["Personal Information"][0]["Age"]), ln=10)
+    personal.cell(40, 6, "Address: " + str(resumeData["Personal Information"][0]["Address"]), ln=10)
+    personal.cell(40, 6, "Contact Number: " + str(resumeData["Personal Information"][0]["Contact Number"]), ln=10)
+    personal.cell(40, 6, "Email: " + str(resumeData["Personal Information"][0]["Email Address"]), ln=10)
 
-# add text (width, height, text)
-for i in range(1, 51):
-    pdf.cell(0, 10, f"This is line {i}", ln=True)
+def summaryDetails(summary):
+    summary.cell(90, 10, "Summary", ln=1, align='c')
+    summary.ln(3)
+    summary.set_font('helvetica', '', 12)
 
-# generating pdf
+headerDetails(pdf)
+personalDetails(pdf)
+
+# producing pdf
 pdf.output('BUGNON_JELISHARUTH.pdf')
-
-
-
-
