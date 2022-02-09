@@ -10,16 +10,20 @@
     }
   ],
   "Summary": [
-    "A Software Developer with more than 3 years of experience in development web, mobile and desktop applications with extensive knowledge of Machine Learning and IoT."
+    "A Software Developer with more than 3 years of experience in development web, mobile and desktop",
+    "applications with extensive knowledge of Machine Learning and IoT."
   ],
   "Experience": [
     {
       "Former Work": "Demonstrator on subject Information Systems (October 2020 - August 2021)",
       "Former Company": "Arizona Technologies",
-      "Former Description": "Teaching students and developing e-learning services for sylabuses on different subjects and grading students for their work.",
+      "Former Description": [
+        "Teaching students and developing e-learning services for sylabuses on different subjects and grading",
+        "students for their work."
+      ],
       "Latter Work": "Software Developer (July 2018 - Present)",
       "Latter Company": "Columbia Software Solutions",
-      "Latter Descriptions": "Developing web, systems, and applications."
+      "Latter Description": "Developing web, systems, and applications."
     }
   ],
   "Education": [
@@ -36,6 +40,6 @@
       "Description": "System for small and medium size companies for automating processes in transport logistic."
     }
   ],
-  "Skills": ["OOP", "NoSQL", "SQL", "Algorithms", "Design Patterns"],
+  "Skills": ["- OOP", "- NoSQL", "- SQL", "- Algorithms", "- Design Patterns"],
   "Note": ["Character reference available upon request."]
 }
