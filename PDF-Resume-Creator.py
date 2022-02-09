@@ -78,10 +78,34 @@ def educationDetails(educ):
     educ.cell(40, 6, '' + str(resumeData["Education"][0]["Address"]), ln=10)
     educ.ln(3)
 
+def projectDetails(proj):
+    proj.set_font('helvetica', 'B', 20)
+    proj.cell(90, 10, "Projects", ln=1, align='c')
+    proj.ln(3)
+    proj.set_font('helvetica', '', 12)
+    proj.cell(40, 6, '' + str(resumeData["Projects"][0]["Project"]), ln=10)
+    proj.cell(40, 6, '' + str(resumeData["Projects"][0]["Position"]), ln=10)
+    proj.cell(40, 6, '' + str(resumeData["Projects"][0]["Description"]), ln=10)
+    proj.ln(3)
+
+def skillsDetails(skill):
+    skill.set_font('helvetica', 'B', 20)
+    skill.cell(90, 10, "Skills", ln=1, align='c')
+    skill.ln(3)
+    skill.set_font('helvetica', '', 12)
+    skill.cell(40, 6, '' + str(resumeData["Skills"][0]), ln=10)
+    skill.cell(40, 6, '' + str(resumeData["Skills"][1]), ln=10)
+    skill.cell(40, 6, '' + str(resumeData["Skills"][2]), ln=10)
+    skill.cell(40, 6, '' + str(resumeData["Skills"][3]), ln=10)
+    skill.cell(40, 6, '' + str(resumeData["Skills"][4]), ln=10)
+    skill.ln(3)
+
 headerDetails(pdf)
 personalDetails(pdf)
 summaryDetails(pdf)
 experienceDetails(pdf)
+projectDetails(pdf)
+skillsDetails(pdf)
 
 # making pdf
 pdf.output('BUGNON_JELISHARUTH.pdf')
