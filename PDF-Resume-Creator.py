@@ -139,7 +139,7 @@ def noteDetails(note):
     note.set_font('helvetica', 'I', 10)
     note.cell(40, 6, '*Note: ' + str(resumeData["Note"][0]), ln=1)
 
-# calling out all the defined functions 
+# calling out all the defined functions to be displayed
 headerDetails(pdf)
 personalDetails(pdf)
 summaryDetails(pdf)
@@ -149,5 +149,5 @@ projectDetails(pdf)
 skillsDetails(pdf)
 noteDetails(pdf)
 
-# making pdf
+# generating pdf
 pdf.output('BUGNON_JELISHARUTH.pdf')
