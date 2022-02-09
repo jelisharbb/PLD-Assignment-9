@@ -127,17 +127,17 @@ def skillsDetails(skill):
     skill.cell(0, 8, "Skills", fill=True, ln=1, align='L')
     skill.ln(1)
     skill.set_font('helvetica', '', 11)
-    skill.cell(40, 6, '' + str(resumeData["Skills"][0]), ln=1)
-    skill.cell(40, 6, '' + str(resumeData["Skills"][1]), ln=1)
-    skill.cell(40, 6, '' + str(resumeData["Skills"][2]), ln=1)
-    skill.cell(40, 6, '' + str(resumeData["Skills"][3]), ln=1)
-    skill.cell(40, 6, '' + str(resumeData["Skills"][4]), ln=1)
+    skill.cell(68, 6, '' + str(resumeData["Skills"][0]), ln=0)
+    skill.cell(68, 6, '' + str(resumeData["Skills"][1]), ln=0)
+    skill.cell(68, 6, '' + str(resumeData["Skills"][2]), ln=1)
+    skill.cell(68, 6, '' + str(resumeData["Skills"][3]), ln=0)
+    skill.cell(68, 6, '' + str(resumeData["Skills"][4]), ln=1)
     skill.ln(2)
 
 # display note
 def noteDetails(note):
-    note.set_font('helvetica', 'I', 9)
-    note.cell(40, 6, 'Note: ' + str(resumeData["Note"][0]), ln=1)
+    note.set_font('helvetica', 'I', 10)
+    note.cell(40, 6, '*Note: ' + str(resumeData["Note"][0]), ln=1)
 
 # calling out all the defined functions 
 headerDetails(pdf)
