@@ -29,7 +29,7 @@ pdf.set_margin(12.7)
 
 # display header
 def headerDetails(header):
-    header.image('resume picture.jpg', 152, 10, 50.8)
+    header.image('resume-picture.jpg', 152, 10, 50.8)
     header.set_font('helvetica', 'B', 27)
     header.cell(115, 10, "Jelisha Ruth Bugnon", ln=True, align='L')
     header.set_font('helvetica', '', 15)
